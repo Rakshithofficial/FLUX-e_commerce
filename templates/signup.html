@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLUX • Auth</title>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<!-- OAuth Loading Modal -->
+<div id="oauthModal" class="oauth-modal" style="display:none">
+  <div class="oauth-box">
+    <div id="oauthLogo" class="oauth-logo">G</div>
+    <p id="oauthText">Signing in…</p>
+  </div>
+</div>
+
+<body class="auth-page">
+
+  <div class="auth-container">
+    <h1 class="logo">FLUX</h1>
+
+    <p class="section-subtitle" id="formTitle">Create your account</p>
+
+    <p class="success-msg" id="successMsg" style="display:none"></p>
+
+    <!-- Social Auth -->
+    <button type="button" class="google-btn" id="googleBtn">
+      Continue with Google
+    </button>
+
+    <button type="button" class="apple-btn" id="appleBtn">
+      Continue with Apple
+    </button>
+
+    <div class="divider">or</div>
+
+    <!-- Email Auth -->
+    <input type="text" id="name" placeholder="Full Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+
+    <button type="button" class="primary-btn" id="submitBtn">
+      Create Account
+    </button>
+
+    <p class="auth-switch">
+      <span id="switchText">Already a user?</span>
+      <a href="#" id="switchMode">Sign in</a>
+    </p>
+  </div>
+
+  <script src="{% static 'js/signup.js' %}"></script>
+</body>
+</html>
