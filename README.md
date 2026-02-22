@@ -1,111 +1,68 @@
-````md
-# FLUX – Django E-Commerce Project
+⚠️ IMPORTANT – How to Run This Project
 
-FLUX is a Django-based e-commerce web application built using Django templates, static files, and JavaScript.  
-It focuses on a clean UI, product browsing, cart flow, and a scalable backend-ready structure.
+All backend-related operations must be executed from inside the `flux/` directory, as this is where the Django `manage.py` file is located.
 
 ---
 
-## How to Run the Project (Local Setup)
+# FLUX – E-Commerce Project (Django Backend)
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/Rakshithofficial/FLUX-e_commerce.git
-cd FLUX-e_commerce
-````
-
-### 2. Create a virtual environment
-
-```bash
-python -m venv venv
-```
-
-### 3. Activate the virtual environment (Windows – PowerShell)
-
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-If activation is blocked:
-
-```powershell
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-```
-
-### 4. Install dependencies
-
-```bash
-pip install django
-```
-
-### 5. Go inside the Django project folder
-
-```bash
-cd flux
-```
-
-> This step is required because `manage.py` is inside the `flux/` folder.
-
-### 6. Run the development server
-
-```bash
-python manage.py runserver
-```
-
-### 7. Open in browser
-
-```
-http://127.0.0.1:8000/
-```
+FLUX is a Django-based e-commerce project designed with a clean frontend and a scalable backend structure.  
+The project uses Django templates and static assets (HTML, CSS, JavaScript) to deliver a smooth shopping experience while keeping the backend ready for future expansion.
 
 ---
 
-## Features
+## Backend Responsibilities
 
-* Public home page (no forced login)
-* Product listing with images
-* Cart with quantity controls
-* Orders page
-* Profile and settings pages
-* Django templates + static assets
-* Ready for backend expansion (auth, products, checkout)
+The Django backend is responsible for:
+
+- User authentication (signup, login, sessions)
+- Data storage and management
+- Routing and server-side rendering
+- Django admin configuration
 
 ---
 
-## Tech Stack
+## Frontend Responsibilities
 
-* Backend: Django 4.2
-* Frontend: HTML, CSS, JavaScript
-* Database: SQLite (local development)
-* Version Control: Git & GitHub
+The frontend layer handles:
+
+- User interface pages (home, signup, login, products, cart, orders, profile)
+- Client-side interactions using JavaScript
+- Styling and layout using CSS
+- Static asset management (images, stylesheets, scripts)
 
 ---
 
 ## Project Structure
 
-```
 flux/
-├── flux/              # Django project settings
-├── static/            # CSS, JS, images
-├── templates/         # HTML templates
-├── manage.py
-└── README.md
-```
+├── flux/ # Django project configuration
+├── static/ # CSS, JavaScript, images
+├── templates/ # HTML templates
+├── manage.py # Django entry point
+
+
+---
+
+## How This Project Works
+
+- The application follows a Django-first architecture.
+- Pages are rendered using Django templates.
+- Static assets are served through Django during development.
+- The backend and frontend are tightly integrated for simplicity and maintainability.
+- The project is structured to allow easy addition of features such as payments, product models, and order management.
 
 ---
 
 ## Notes
 
-* `venv/` and `db.sqlite3` are intentionally excluded from Git
-* Static files are served by Django during development
-* Designed for easy backend and feature expansion
+- Virtual environment files and database files are excluded from version control.
+- This project is intended for learning, practice, and portfolio demonstration.
+- The structure is kept clean to support future backend enhancements and deployment.
 
 ---
 
 ## Author
 
-Rakshith
-GitHub: [https://github.com/Rakshithofficial](https://github.com/Rakshithofficial)
-
-```
-```
+Rakshith  
+GitHub: https://github.com/Rakshithofficial
